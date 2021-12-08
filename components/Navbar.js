@@ -16,10 +16,10 @@ const Navbar = () => {
                 <div className="h-8 w-8 cursor-pointer md:hidden block" onClick={handleToggle}> <FaBars /> </div>
                 <div className={toggle ? "w-full md:flex md:items-center md:w-auto" : "hidden w-full md:flex md:items-center md:w-auto"}>
                     <ul className="text-base text-gray-700 pt-4 md:flex md:justify-between md:pt-0">
-                        <Link href="/"><li className="md:p-4 py-2 block hover:text-purple-400">Home</li></Link>
-                        <Link href="/shop"><li className="md:p-4 py-2 block hover:text-purple-400">Shop</li></Link>
-                        <Link href="/contact"><li className="md:p-4 py-2 block hover:text-purple-400">Contact</li></Link>
-                        <Link href="/cart">
+                        <Link href="/" passHref><li className="md:p-4 py-2 block hover:text-purple-400">Home</li></Link>
+                        <Link href="/shop" passHref><li className="md:p-4 py-2 block hover:text-purple-400">Shop</li></Link>
+                        <Link href="/contact" passHref><li className="md:p-4 py-2 block hover:text-purple-400">Contact</li></Link>
+                        <Link href="/cart" passHref>
                             <li className="relative md:p-4 py-2 mt-1 text-xl block hover:text-purple-400"><HiShoppingCart />
                                 <span className="absolute top-1 right-0 text-sm flex justify-center items-center bg-black text-white rounded-full w-6 h-6">
                                     { cart !== 'null' ? "0" : cart.count() }

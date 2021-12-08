@@ -17,7 +17,7 @@ export async function getStaticProps() {
     }
 }
 
-const shop = ({ data }) => {
+const Shop = ({ data }) => {
 
     const { addCartItem } = useContext(CartContext);
     const addToCart = (productID, productImg, productTitle, productPrice) => {
@@ -33,7 +33,7 @@ const shop = ({ data }) => {
                             <div className="h-4/5 w-full flex justify-center">
                                 <img src={products.image} alt="product imag" className="w-4/5 h-full p-4"></img>
                             </div>
-                            <Link href={`/${products.id}`}>
+                            <Link href={`/${products.id}`} passHref>
                                 <div className="p-4 bg-gray-100 cursor-pointer">
                                     <h1 className="">
                                         {products.title.length > 10 ? products.title.substring(0, 30) + "..." : products.title}
@@ -51,4 +51,4 @@ const shop = ({ data }) => {
     );
 }
 
-export default shop;
+export default Shop;

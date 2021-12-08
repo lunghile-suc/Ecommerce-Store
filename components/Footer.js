@@ -1,4 +1,5 @@
 import { FaFacebookF, FaInstagram, FaTwitter, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
+import Link from 'next/link'
 
 const Footer = () => {
     return (
@@ -13,9 +14,9 @@ const Footer = () => {
             </div>
             <div className="mx-6 my-4">
                 <h4 className="lg:text-2xl font-semibold mb-4">Quick Links</h4>
-                <a href="/cart" className="flex items-center mb-7">-Cart</a>
-                <a href="/shop" className="flex items-center mb-7">-Shop</a>
-                <a href="" className="flex items-center mb-7">-Orders</a>
+                <Link href="/cart" passHref><a className="flex items-center mb-7">-Cart</a></Link>
+                <Link href="/shop" passHref><a className="flex items-center mb-7">-Shop</a></Link>
+                <Link href="/shop" passHref><a className="flex items-center mb-7">-Orders</a></Link>
             </div>
             <div className="mx-6 my-4">
                 <h4 className="lg:text-2xl font-semibold mb-4">Help</h4>

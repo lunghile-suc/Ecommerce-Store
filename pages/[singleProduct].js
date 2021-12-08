@@ -28,7 +28,7 @@ export const getStaticProps = async (context) => {
     }
 }
 
-const singleProduct = ({ product }) => {
+const SingleProduct = ({ product }) => {
     const { addCartItem } = useContext(CartContext);
     const addToCart = (productID, productImg, productTitle, productPrice) => {
         addCartItem(productID, productImg, productTitle, productPrice)
@@ -50,4 +50,4 @@ const singleProduct = ({ product }) => {
     );
 }
 
-export default singleProduct;
+export default SingleProduct;
